@@ -84,6 +84,16 @@ if __name__ == "__main__":
             """
             return 2 * (self.width + self.height)
 
+        def __repr__(self) -> str:
+            """
+            Перегруженный метод, добавляет информацию о параметрах фигуры в строковое представление.
+            Возвращает официальное строковое представление прямоугольника.
+
+            Returns:
+                Официальное строковое представление прямоугольника.
+
+            """
+            return f"Rectangle({self.color}, {self.width}, {self.height})"
 
     class Circle(Shape):
         """Дочерний класс Круг."""
@@ -133,6 +143,16 @@ if __name__ == "__main__":
             """
             return 2 * 3.14 * self.radius
 
+        def __repr__(self) -> str:
+            """
+            Перегруженный метод, добавляет информацию о параметрах фигуры в строковое представление.
+            Возвращает официальное строковое представление круга.
+
+            Returns:
+                Официальное строковое представление круга.
+
+            """
+            return f"Circle({self.color}, {self.radius})"
 
     circle = Circle("red", 3)
     print(circle)  # This is a red circle with radius 3
